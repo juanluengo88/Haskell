@@ -83,7 +83,7 @@ g(_,c,_)=c
 
 
 t :: (Ord a, Num a, Num t) => t -> (t -> a) -> [t] -> t
-t x _ [] = x --caso base
-t x y (z:zs)| y z > 0 = z + t x y zs --caso recursivo 
+t x _ [] = x                                                --caso base
+t x y (z:zs)| y z > 0 = z + t x y zs                        --caso recursivo 
             | otherwise = t x y zs  
 

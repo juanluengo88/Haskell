@@ -40,5 +40,6 @@ medicamento' :: [(Animal -> Animal)] -> Animal -> Animal
 medicamento' hierbas raton = foldl (\unRaton unaHierba -> unaHierba unRaton) raton hierbas
 
 
-antiAge::Animal -> Animal
+antiAge :: Animal -> Animal
 antiAge raton= medicamento (replicate 3 hierbaBuena ++ [alcachofa]) raton 
+
